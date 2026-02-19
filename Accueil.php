@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require 'db.php';
 $avis = $pdo->query("SELECT a.note, a.description, u.prenom, u.nom FROM avis a JOIN utilisateur u ON u.utilisateur_id = a.utilisateur_id WHERE a.statut = 'validé' ORDER BY a.avis_id DESC LIMIT 6")->fetchAll(PDO::FETCH_ASSOC);
 ?>
