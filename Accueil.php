@@ -1,4 +1,7 @@
-<?php
+$php_open = true;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require 'db.php';
 $avis = $pdo->query("SELECT a.note, a.description, u.prenom, u.nom FROM avis a JOIN utilisateur u ON u.utilisateur_id = a.utilisateur_id WHERE a.statut = 'validé' ORDER BY a.avis_id DESC LIMIT 6")->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -46,7 +49,7 @@ $avis = $pdo->query("SELECT a.note, a.description, u.prenom, u.nom FROM avis a J
             <div class="frise-element">
                 <div class="frise-contenu">
                     <h3>Livraison ponctuelle et soignée</h3>
-                    <p>Vos repas arrivent à l'heure, prêts à être dégustés.</p>
+                    <p>Vos repas arrivent à l heure, prêts à être dégustés.</p>
                 </div>
             </div>
         </div>
