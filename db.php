@@ -6,7 +6,6 @@ $options = [
 ];
 
 if (getenv('JAWSDB_URL')) {
-    // Connexion Heroku (JawsDB)
     $url = parse_url(getenv('JAWSDB_URL'));
     $dbHote = $url['host'];
     $dbNom = ltrim($url['path'], '/');
@@ -14,17 +13,7 @@ if (getenv('JAWSDB_URL')) {
     $dbMotDePasse = $url['pass'];
     $dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
     $pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
-} elseif (getenv('CLEARDB_DATABASE_URL')) {
-    // Connexion Heroku (ClearDB)
-    $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
-    $dbHote = $url['host'];
-    $dbNom = ltrim($url['path'], '/');
-    $dbUtilisateur = $url['user'];
-    $dbMotDePasse = $url['pass'];
-    $dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
-    $pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
 } else {
-    // Connexion locale
     $dbHote = 'localhost';
     $dbNom = 'vite_gourmand';
     $dbUtilisateur = 'root';
