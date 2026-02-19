@@ -37,7 +37,7 @@ if (isset($_GET['token'])) {
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nouveau_mdp'])) {
             $nouveauMdp = $_POST['nouveau_mdp'];
             $hash = password_hash($nouveauMdp, PASSWORD_DEFAULT);
-            $stmt = $pdo->prepare('UPDATE utilisateur SET mot_de_passe = ?, reset_token = NULL, reset_token_expire = NULL WHERE utilisateur_id = ?');
+            $stmt = $pdo->prepare('UPDATE utilisateur SET password = ?, reset_token = NULL, reset_token_expire = NULL WHERE utilisateur_id = ?');
             $stmt->execute([$hash, $user['utilisateur_id']]);
             $message = "Mot de passe réinitialisé.";
         }
