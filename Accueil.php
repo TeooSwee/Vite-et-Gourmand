@@ -2,8 +2,33 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require 'db.php';
-$avis = $pdo->query("SELECT a.note, a.description, u.prenom, u.nom FROM avis a JOIN utilisateur u ON u.utilisateur_id = a.utilisateur_id WHERE a.statut = 'validé' ORDER BY a.avis_id DESC LIMIT 6")->fetchAll(PDO::FETCH_ASSOC);
+
+try {
+    $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ];
+    if (getenv('JAWSDB_URL')) {
+        $url = parse_url(getenv('JAWSDB_URL'));
+        $dbHote = $url['host'];
+        $dbNom = ltrim($url['path'], '/');
+        $dbUtilisateur = $url['user'];
+        $dbMotDePasse = $url['pass'];
+        $dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
+        $pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
+    } else {
+        $dbHote = 'localhost';
+        $dbNom = 'vite_gourmand';
+        $dbUtilisateur = 'root';
+        $dbMotDePasse = 'root';
+        $dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
+        $pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
+    }
+    echo 'Connexion MySQL réussie !';
+} catch (Exception $e) {
+    echo 'Erreur de connexion MySQL : ' . $e->getMessage();
+}
+exit;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
