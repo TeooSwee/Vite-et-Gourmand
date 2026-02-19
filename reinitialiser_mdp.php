@@ -1,4 +1,3 @@
-session_start();
 <?php
 include 'db.php';
 session_start();
@@ -34,12 +33,17 @@ if (isset($_GET['token'])) {
     $stmt->execute([$token]);
     $user = $stmt->fetch();
     if ($user && strtotime($user['reset_token_expire']) > time()) {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nouveau_mdp'])) {
-            $nouveauMdp = $_POST['nouveau_mdp'];
-            $hash = password_hash($nouveauMdp, PASSWORD_DEFAULT);
-            $stmt = $pdo->prepare('UPDATE utilisateur SET password = ?, reset_token = NULL, reset_token_expire = NULL WHERE utilisateur_id = ?');
-            $stmt->execute([$hash, $user['utilisateur_id']]);
-            $message = "Mot de passe réinitialisé.";
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['motdepasse'], $_POST['confirmation'])) {
+            $motdepasse = $_POST['motdepasse'];
+            $confirmation = $_POST['confirmation'];
+            if ($motdepasse !== $confirmation) {
+                $message = "Les mots de passe ne correspondent pas.";
+            } else {
+                $hash = password_hash($motdepasse, PASSWORD_DEFAULT);
+                $stmt = $pdo->prepare('UPDATE utilisateur SET password = ?, reset_token = NULL, reset_token_expire = NULL WHERE utilisateur_id = ?');
+                $stmt->execute([$hash, $user['utilisateur_id']]);
+                $message = "Mot de passe réinitialisé.";
+            }
         }
     } else {
         $erreur = "Lien de réinitialisation invalide ou expiré.";
