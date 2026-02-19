@@ -1,0 +1,2645 @@
+.admin-espace section > button.panier-supprimer {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 220px !important;
+    display: block;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box !important;
+    font-size: 1.1em;
+}
+.admin-espace .zone-deconnexion > button.panier-supprimer {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 220px !important;
+    display: inline-block;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box !important;
+    font-size: 1.1em;
+}
+.zone-deconnexion > button.panier-supprimer {
+    width: auto !important;
+    min-width: 120px !important;
+    max-width: 220px !important;
+    display: inline-block;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box !important;
+    font-size: 1.1em;
+}
+.admin-actions-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.admin-actions-group .btn-admin {
+    width: auto;
+    min-width: 80px;
+    max-width: 140px;
+    align-self: center;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.compte-commandes {
+    margin-bottom: 32px;
+}
+
+body .compte-commandes.carte.compte-bloc.compte-bloc-large + .compte-grille.compte-grille-infos-avis {
+    margin-top: 48px;
+}
+.reduction-cachee {
+    display: none;
+    color: #008000;
+    font-weight: bold;
+}
+
+.message-cache {
+    display: none;
+}
+@media (max-width: 1024px) {
+    body { padding: 30px 20px; }
+    header { padding: 80px 20px 40px 20px; }
+    .frise { flex-direction: column; gap: 20px; }
+    .frise::before { display: none; }
+    .frise-element { width: 100%; max-width: 500px; margin: 0 auto; }
+    #panier { position: static; width: 460px; max-width: 90vw; margin: 30px auto 0; margin-bottom: 30px; }
+}
+@media (max-width: 1000px) {
+    .compte-infos, .compte-avis, .compte-etroit, .compte-bloc {
+        width: 90vw;
+        max-width: 400px;
+    }
+}
+
+.carte-large-centree {
+    min-width: 220px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.texte-centre { text-align: center; }
+.fond-gris-clair { background: #f0f0f0; }
+.table-bg {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.th-centre { text-align: center; padding: 12px 16px; }
+.th-gauche { text-align: left; padding: 12px 16px; font-weight: bold; border-bottom: 1px solid #ececec; }
+.td-centre { text-align: center; vertical-align: middle; padding: 12px 16px; }
+.td-gauche { text-align: left; vertical-align: top; padding: 12px 16px; }
+.td-preline { white-space: pre-line; }
+.form-inline { display: inline-block; }
+.form-mr4 { margin-right: 4px; }
+
+.compte-grille {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 40px;
+}
+.section-centree { display: flex; justify-content: center; }
+.mt-12 { margin-top: 12px; }
+.textarea-avis { width: 100%; min-height: 80px; margin-top: 4px; }
+.flex-centre { display: flex; justify-content: center; width: 100%; }
+.table-avis-centree { border-collapse: collapse; width: 90%; max-width: 700px; margin: 16px auto; max-width: 90vw; padding: 8px 2vw; }
+@media (max-width: 768px) {
+    body { padding: 15px; }
+    header { padding: 60px 15px 30px 15px; margin-bottom: 30px; }
+    footer { padding: 15px; }
+    .contenu-footer { gap: 15px; }
+    .compte-commandes, .table-commandes, .carte-commandes {
+        max-width: 98vw;
+        padding: 4px 1vw;
+    }
+    .table-ligne, .table-entete {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 0.97em;
+        border-radius: 8px;
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .adresse-grille { grid-template-columns: 1fr; }
+    .liens { flex-direction: column; gap: 10px; }
+    .table-ligne, .table-entete {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        padding: 10px 0;
+        font-size: 0.97em;
+        border-radius: 8px;
+    }
+}
+@media (max-width: 480px) {
+    body { padding: 10px; }
+    header { padding: 40px 10px 20px 10px; }
+    footer { padding: 20px 10px; font-size: 0.9em; }
+    .compte-grille, .compte-grille-haut { justify-items: center; }
+    .compte-infos, .compte-avis, .compte-etroit, .compte-bloc {
+        width: 95vw;
+        max-width: 350px;
+        min-width: 180px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    nav ul { flex-direction: column; padding: 10px; gap: 5px; }
+    nav li { margin: 0; width: 100%; text-align: center; margin: 0 auto; }
+    nav a { display: block; width: 100%; padding: 10px; }
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.3em; }
+    h2::after { width: 40px; height: 2px; }
+    section { margin-bottom: 30px; }
+    section p { font-size: 0.95em; line-height: 1.5; }
+    .carte { padding: 10px; }
+    .element h3 { font-size: 1.1em; }
+    .element p { font-size: 0.9em; }
+    button { width: 100%; padding: 12px; font-size: 1em; }
+    #panier { padding: 15px; margin: 20px auto 0; }
+    #panier h3 { font-size: 1.2em; }
+    .horaires h3 { font-size: 1.1em; }
+    .horaires p { font-size: 0.85em; }
+    .liens { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+    .liens a { margin: 0; padding: 8px; background: #f0f0f0; border-radius: 5px; display: block; text-align: center; margin: 0 auto; }
+}
+
+.table-commandes th, .table-commandes td {
+        text-align: center !important;
+    min-width: 110px;
+    max-width: 220px;
+    width: 150px;
+    padding: 16px 14px !important;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 1.5px solid #ececec;
+}
+.table-commandes th.commentaire, .table-commandes td.commentaire {
+    width: auto;
+    min-width: 180px;
+    max-width: 420px;
+    white-space: pre-line;
+    text-align: center !important;
+    vertical-align: middle;
+    font-size: 1em;
+    word-break: break-word;
+}
+.table-commandes td .actions-col {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    justify-content: center;
+}
+.table-commandes th {
+    background: #f0f0f0;
+    font-weight: 700;
+}
+.table-commandes td:nth-child(3), .table-commandes th:nth-child(3) {
+    text-align: left;
+}
+.avis-pending-table-strict {
+    width: 900px !important;
+    min-width: 700px !important;
+    max-width: 1000px !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+    border-collapse: collapse !important;
+    border: 2px solid #bbb !important;
+}
+.avis-pending-table-strict th, .avis-pending-table-strict td {
+    border: 1px solid #bbb !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 48px !important;
+    box-sizing: border-box !important;
+}
+.avis-strict-th {
+    background: #f0f0f0 !important;
+    font-weight: 700 !important;
+    font-size: 1.13em !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+.avis-strict-th.commentaire {
+        min-width: 520px;
+        font-size: 0.97em;
+    }
+    .admin-avis-th, .admin-avis-td {
+        padding: 8px 4px;
+        font-size: 0.97em;
+    }
+    .admin-avis-td.commentaire {
+        max-width: 180px;
+        word-break: break-word;
+    }
+    .admin-avis-td.client {
+        max-width: 100px;
+        word-break: break-word;
+    }
+    .admin-avis-td.action {
+        min-width: 60px;
+    }
+    .admin-espace section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .admin-avis-form button, .admin-avis-table button {
+        width: 100%;
+        min-width: 80px;
+        font-size: 0.97em;
+        margin-bottom: 4px;
+    }
+
+body.admin-espace {
+    text-align: center;
+}
+.admin-espace header {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 0 0 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.admin-espace nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.admin-espace section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-espace .carte {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.compte-avis .avis-table-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.compte-avis .avis-table-wrapper .table-commandes {
+    max-width: 600px;
+    width: 100%;
+}
+
+.admin-avis-table {
+    margin: 0 auto 32px auto;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.admin-avis-th {
+    background: #f0f0f0;
+    font-weight: 700;
+    padding: 16px 14px;
+    text-align: center !important;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 1.08em;
+}
+.admin-avis-td {
+        text-align: center !important;
+    padding: 16px 14px;
+    vertical-align: middle;
+    border-bottom: 1.5px solid #ececec;
+    background: #f9f9f9;
+    word-break: break-word;
+    font-size: 1em;
+}
+.admin-avis-td.client {
+    max-width: 180px;
+}
+.admin-avis-td.commentaire {
+    max-width: 350px;
+}
+.admin-avis-td.note {
+    min-width: 40px;
+    text-align: center;
+}
+.admin-avis-td.action {
+    min-width: 80px;
+    text-align: center;
+}
+.admin-avis-form {
+    display: inline-block;
+    margin: 0;
+}
+@media (max-width: 900px) {
+    .admin-table-scroll {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow-x: auto !important;
+        box-sizing: border-box;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: none !important;
+    }
+    .admin-table-scroll table.table-commandes {
+        width: 100vw !important;
+        min-width: 600px !important;
+        max-width: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box;
+        background: none !important;
+    }
+}
+@media (max-width: 900px) {
+    .admin-espace .carte {
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+    .admin-espace .carte > table.table-commandes {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box;
+        overflow-x: auto !important;
+        display: block !important;
+    }
+    .admin-espace .carte > h3,
+    .admin-espace .carte > p {
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+}
+@media (max-width: 900px) {
+    .admin-espace .table-commandes,
+    .admin-espace table.table-commandes {
+        width: 100%;
+        max-width: 100vw;
+        min-width: 0;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border-radius: 8px;
+        box-sizing: border-box;
+        overflow-x: auto;
+    }
+    .admin-espace .carte {
+        padding-left: 2vw !important;
+        padding-right: 2vw !important;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto 32px auto;
+    }
+    .admin-espace .carte > h3,
+    .admin-espace .carte > p,
+    .admin-espace .carte > table {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media (max-width: 900px) {
+    .admin-espace .carte,
+    .admin-espace .table-commandes,
+    .admin-espace section {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box;
+        border-radius: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .admin-espace .carte {
+        padding-left: 2vw !important;
+        padding-right: 2vw !important;
+    }
+    .admin-espace .table-commandes {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.compte-commandes {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.carte-commandes {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+@media (min-width: 1100px) {
+    .compte-grille-infos-avis .compte-infos,
+    .compte-grille-infos-avis .compte-avis {
+        width: 480px;
+        max-width: 480px;
+    }
+}
+@media (min-width: 901px) {
+    .utilisateur-espace .compte-grille-infos-avis > .compte-colonne > .compte-bloc {
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+}
+.utilisateur-espace .compte-commandes {
+    width: 90vw;
+    max-width: 90vw;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-bottom: 48px;
+}
+.utilisateur-espace .zone-deconnexion {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.utilisateur-espace .compte-commandes {
+    width: 90vw;
+    max-width: 90vw;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.compte-grille-infos-avis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .compte-grille-infos-avis {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 98vw;
+    }
+}
+.grille-authentification {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+}
+.grille-authentification > .carte-authentification {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .grille-authentification {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 420px;
+        width: 98vw;
+    }
+}
+.carte-panier {
+    text-align: left;
+}
+
+.carte-panier h2, .carte-panier .titre-panier {
+    text-align: left;
+    margin-left: 0;
+}
+
+.carte-panier button, .carte-panier .bouton-panier {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+body {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+:root {
+    --primary-bg: #fff;
+    --secondary-bg: #f9f9f9;
+    --border: #ececec;
+    --radius: 10px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --accent: #e74c3c;
+    --accent-hover: #c0392b;
+    --text-main: #222;
+    --text-light: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', Georgia, serif;
+    background: var(--primary-bg);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+.carte, .compte-bloc, .compte-commandes {
+    background: var(--primary-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    margin: 24px auto;
+    max-width: 1100px;
+}
+
+.table-commandes {
+    border-radius: var(--radius);
+    overflow-x: auto;
+    margin: 0 auto;
+    gap: 0;
+}
+
+.table-ligne, .table-entete {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    align-items: center;
+    padding: 10px 0;
+    background: var(--secondary-bg);
+}
+
+.table-entete {
+    font-weight: bold;
+    background: #f0f0f0;
+}
+
+.panier-supprimer {
+    background: var(--accent);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.panier-supprimer:hover {
+    background: var(--accent-hover);
+}
+
+.zone-deconnexion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 72px auto;
+    margin-bottom: 40px !important;
+    text-align: center;
+}
+
+.zone-deconnexion button {
+    width: auto !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    display: inline-block;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box !important;
+}
+
+.zone-deconnexion button {
+    width: auto !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    box-sizing: content-box !important;
+}
+
+@media (max-width: 900px) {
+    .carte, .compte-bloc, .compte-commandes {
+        max-width: 98vw;
+        padding: 12px;
+    }
+    .table-ligne, .table-entete {
+        font-size: 0.95em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+footer {
+    background: #f8f9fa;
+    color: var(--text-main);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    margin-top: auto;
+}
+
+.page-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.compte-grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .compte-grille {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        justify-items: center;
+    }
+}
+.compte-bloc {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+    margin-bottom: 0;
+    width: unset;
+    max-width: none;
+    box-sizing: border-box;
+}
+.compte-commandes {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding: 24px 16px;
+    overflow-x: auto;
+    text-align: center;
+    display: block;
+    min-height: 120px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.zone-deconnexion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 32px auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panier-supprimer {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.panier-supprimer:hover {
+    background: #c0392b;
+}
+.table-commandes {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+.table-ligne, .table-entete {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.2fr 1.2fr 1fr 2fr;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    word-break: break-word;
+    justify-items: center;
+    text-align: center;
+}
+.table-entete {
+    font-weight: 600;
+    background: #f0f0f0;
+    padding: 12px 0;
+}
+.table-ligne {
+    background: #f9f9f9;
+}
+@media (max-width: 700px) {
+    .table-ligne, .table-entete {
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        padding: 10px 0;
+        font-size: 0.97em;
+        border-radius: 8px;
+    }
+}
+.contenu-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+.horaires {
+    margin-bottom: 0;
+}
+.liens {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.liens a {
+    color: #000;
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: 'Lora', Georgia, serif;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    align-items: center;
+}
+
+.admin-espace .carte,
+.admin-espace .table-commandes,
+.admin-espace section {
+    max-width: 1200px !important;
+    width: 90vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+.admin-espace .carte {
+    margin-bottom: 32px;
+    border-radius: 16px;
+    padding: 32px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.admin-espace .table-commandes {
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    overflow-x: auto;
+    display: block;
+    background: none;
+}
+.admin-espace .table-commandes .table-ligne,
+.admin-espace .table-commandes .table-entete {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0;
+    gap: 12px;
+}
+.admin-espace .table-commandes .table-entete {
+    font-weight: 700;
+    background: #f0f0f0;
+    border-radius: 12px 12px 0 0;
+    font-size: 1.1em;
+    padding: 16px 0;
+}
+.admin-espace .table-commandes .table-ligne {
+    background: #f9f9f9;
+    border-radius: 0 0 12px 12px;
+    font-size: 1.05em;
+    margin-bottom: 2px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+        max-width: 900px;
+        width: 100%;
+    padding: 2px 8px;
+    white-space: normal !important;
+    flex: 1 1 0;
+    min-width: 0;
+    word-break: break-word;
+}
+.admin-espace .table-commandes .table-entete span {
+    font-size: 1.08em;
+}
+.admin-espace .table-commandes form {
+    margin: 0;
+}
+.admin-espace .table-commandes button[type="submit"] {
+    background: #00c6cf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 0;
+    min-width: 0;
+    min-height: 0;
+    box-shadow: none;
+}
+.admin-espace .table-commandes button[type="submit"]:hover {
+    background: #009ea8;
+}
+.admin-espace header,
+.admin-espace .carte,
+.admin-espace .table-commandes,
+.admin-espace section {
+    max-width: 1200px !important;
+    width: 98vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+.admin-espace .carte {
+    margin-bottom: 32px;
+    border-radius: 16px;
+    padding: 32px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.admin-espace .table-commandes {
+    margin-bottom: 24px;
+}
+html, body, * {
+    font-family: 'Lora', Georgia, serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 2px solid #00CED1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100vw;
+    min-width: 0;
+    max-width: none;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+nav li {
+    margin: 0 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+nav a:hover {
+    color: #00CED1;
+    background-color: rgba(0, 206, 209, 0.05);
+}
+
+header {
+    min-height: 40vh;
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Images/Assiette.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    border-radius: 0;
+    overflow: visible;
+}
+
+
+footer {
+    background-color: #f8f9fa;
+    color: #222;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+.contenu-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.compte-grille, .compte-grille-haut {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+.compte-bloc, .carte, .carte-authentification, .formulaire-contact {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.compte-commandes, .table-commandes {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    box-sizing: border-box;
+    padding: 24px 16px;
+    overflow-x: auto;
+    text-align: center;
+    min-height: 120px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.zone-deconnexion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 32px auto;
+    text-align: center;
+}
+button, .element button, .fenetre-choix, .formulaire-contact button, .carte-authentification button {
+    background: #00CED1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover, .element button:hover, .fenetre-choix:hover, .formulaire-contact button:hover, .carte-authentification button:hover {
+    background: #00BFBF;
+}
+
+/* === Table commandes (ultra-optimisé) === */
+.table-ligne, .table-entete {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.2fr 1.2fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    word-break: break-word;
+}
+.table-entete {
+    font-weight: 600;
+    background: #f0f0f0;
+    padding: 12px 0;
+}
+.table-ligne {
+    background: #f9f9f9;
+}
+
+/* === Panier principal (page) === */
+.carte-panier {
+    text-align: left;
+}
+.carte-panier h2, .carte-panier .titre-panier {
+    text-align: left;
+    margin-left: 0;
+}
+.carte-panier button, .carte-panier .bouton-panier {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* === Panier flottant === */
+#panier {
+    position: fixed;
+    bottom: 20px; right: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+    width: 400px;
+    z-index: 1000;
+    text-align: left;
+    align-items: flex-start;
+}
+
+#panier ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    align-items: flex-start;
+}
+#panier li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+    body { padding: 30px 20px; }
+    header { padding: 80px 20px 40px 20px; }
+    .compte-commandes, .table-commandes {
+        max-width: 90vw;
+        padding: 8px 2vw;
+    }
+}
+@media (max-width: 768px) {
+    body { padding: 15px; }
+    header { padding: 60px 15px 30px 15px; margin-bottom: 30px; }
+    footer { padding: 15px; }
+    .contenu-footer { gap: 15px; }
+    .compte-commandes, .table-commandes {
+        max-width: 98vw;
+        padding: 4px 1vw;
+    }
+    .table-ligne, .table-entete {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 0.97em;
+        border-radius: 8px;
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    body { padding: 10px; }
+    header { padding: 40px 10px 20px 10px; }
+    footer { padding: 20px 10px; font-size: 0.9em; }
+}
+
+.page-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Navigation === */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 40px;
+    margin: 0 auto;
+    border-bottom: 2px solid #00CED1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+nav li { margin: 0 20px; }
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+nav a:hover { color: #00CED1; background-color: rgba(0, 206, 209, 0.05); }
+
+/* === Header === */
+header {
+    min-height: 40vh;
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Images/Assiette.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0;
+        min-height: 40vh;
+        padding: 0;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+    overflow: visible;
+    background-position: center center;
+}
+
+/* === Footer === */
+footer {
+    background-color: #f8f9fa;
+    color: #222;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0 !important;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+.contenu-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+    body { padding: 30px 20px; }
+    header { padding: 80px 20px 40px 20px; }
+    .compte-commandes {
+        width: 100%;
+        max-width: 90vw;
+        padding: 8px 2vw;
+    }
+    .table-commandes {
+        width: 100%;
+        max-width: 90vw;
+    }
+}
+@media (max-width: 768px) {
+    body { padding: 15px; }
+    header { padding: 60px 15px 30px 15px; margin-bottom: 30px; }
+    footer { padding: 15px; }
+    .contenu-footer { gap: 15px; }
+    .compte-commandes {
+        width: 100%;
+        max-width: 98vw;
+        padding: 4px 1vw;
+    }
+    .table-commandes {
+        width: 100%;
+        max-width: 98vw;
+    }
+    .table-ligne, .table-entete {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 0.97em;
+        border-radius: 8px;
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    body { padding: 10px; }
+    header { padding: 40px 10px 20px 10px; }
+    footer { padding: 20px 10px; font-size: 0.9em; }
+}
+
+/* === Grille et blocs compte === */
+.compte-grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+.compte-bloc {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+.compte-commandes {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 16px;
+}
+    .zone-deconnexion {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px auto 32px auto;
+        padding-bottom: 0;
+    }
+body.admin-espace > footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.admin-espace section {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+/* Grille pour la section du haut (Mes commandes sur toute la largeur, puis infos et avis sur la ligne suivante) */
+.compte-grille-haut {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.compte-grille-haut .compte-commandes {
+    grid-column: 1 / 3;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+
+html, body, * {
+    font-family: 'Lora', Georgia, serif;
+}
+body {
+    margin: 0;
+    padding: 40px;
+    background-color: #ffffff;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+    body { padding: 30px 20px; }
+    header { padding: 80px 20px 40px 20px; }
+    .frise { flex-direction: column; gap: 20px; }
+    .frise::before { display: none; }
+    .frise-element { width: 100%; max-width: 500px; margin: 0 auto; }
+    #panier { position: static; width: 460px; max-width: 90vw; margin: 30px auto 0; margin-bottom: 30px; }
+}
+@media (max-width: 1000px) {
+    .compte-infos, .compte-avis, .compte-etroit {
+        width: var(--compte-largeur);
+        max-width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .compte-grille {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+        row-gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    body { padding: 15px; }
+    nav ul { flex-wrap: wrap; justify-content: center; padding: 15px 10px; gap: 8px; }
+    nav li { margin: 0 5px; }
+    nav a { padding: 8px 15px; font-size: 0.95em; }
+    header { padding: 60px 15px 30px 15px; margin-bottom: 30px; }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    section { margin-bottom: 40px; }
+    .zone-authentification { grid-template-columns: 1fr; }
+    .menu { display: grid; grid-template-columns: 1fr; justify-items: center; width: 100%; padding-left: 0; padding-right: 0; }
+    .carte { width: 100%; max-width: 320px; margin: 0 auto; padding: 15px; }
+    #panier { position: static; width: 460px; max-width: 90vw; margin: 30px auto 0; margin-bottom: 30px; }
+    .formulaire-contact { width: 70%; padding: 20px; }
+    footer { padding: 15px; }
+    .contenu-footer { gap: 15px; }
+}
+@media (max-width: 700px) {
+    .adresse-grille { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+    body { padding: 10px; }
+    nav ul { flex-direction: column; padding: 10px; gap: 5px; }
+    nav li { margin: 0; width: 100%; text-align: center; margin-left: auto; margin-right: auto; }
+    nav a { display: block; width: 100%; padding: 10px; }
+    header { padding: 40px 10px 20px 10px; }
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.3em; }
+    h2::after { width: 40px; height: 2px; }
+    section { margin-bottom: 30px; }
+    section p { font-size: 0.95em; line-height: 1.5; }
+    .carte { padding: 10px; }
+    .element h3 { font-size: 1.1em; }
+    .element p { font-size: 0.9em; }
+    button { width: 100%; padding: 12px; font-size: 1em; }
+    #panier { padding: 15px; margin: 20px auto 0; }
+    #panier h3 { font-size: 1.2em; }
+    footer { padding: 20px 10px; font-size: 0.9em; }
+    .horaires h3 { font-size: 1.1em; }
+    .horaires p { font-size: 0.85em; }
+    .liens { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+    .liens a { margin: 0; padding: 8px; background: #f0f0f0; border-radius: 5px; display: block; text-align: center; margin-left: auto; margin-right: auto; }
+}
+
+html, body, * {
+    font-family: 'Lora', Georgia, serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+footer {
+    background-color: #f8f9fa;
+    color: #222;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px 40px;
+    margin: 0 auto;
+    border-bottom: 2px solid #00CED1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+nav li 
+{ 
+    margin: 0 20px; 
+}
+
+nav a 
+{ 
+    text-decoration: none; 
+    color: #333; 
+    font-weight: 500; 
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    transition: all 0.3s ease; 
+    position: relative; 
+}
+
+nav a::after 
+{ 
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+    width: 0; 
+    height: 2px; 
+    background: #00CED1; 
+    transition: all 0.3s ease; 
+    transform: translateX(-50%); 
+}
+
+nav a:hover 
+{ 
+    color: #00CED1; 
+    background-color: rgba(0, 206, 209, 0.05); 
+}
+
+nav a:hover::after 
+{ 
+    width: 100%; 
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Images/Assiette.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 40px 50px 40px;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    min-width: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0 0 16px 16px;
+}
+
+h1,
+h2
+{
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+h1
+{
+    color: white;
+}
+
+h2 
+{ 
+    color: #2c3e50; 
+}
+
+h2::after 
+{ 
+    content: ''; 
+    display: block; 
+    width: 50px; 
+    height: 3px; 
+    background: #00CED1; 
+    margin: 10px auto; 
+}
+
+section 
+{ 
+    margin-bottom: 50px; 
+    text-align: center; 
+}
+
+.menu 
+{ 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 50px; 
+    justify-content: center; 
+    padding: 20px; 
+}
+
+.menu img
+{
+    width: 280px; 
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.filtres-menus
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: flex-end;
+    background: rgba(0, 206, 209, 0.08);
+    border: 1px solid rgba(0, 206, 209, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 auto 30px;
+    max-width: 1100px;
+}
+
+.groupe-filtre
+{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 180px;
+}
+
+.groupe-filtre label
+{
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.groupe-filtre select
+{
+    border: 1px solid #00CED1;
+    border-radius: 8px;
+    padding: 8px 10px;
+    background: white;
+}
+
+.carte
+{
+    background: white center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+
+@media (min-width: 1100px) {
+    /* plus nécessaire, déjà géré par la règle principale */
+}
+
+@media (max-width: 1000px) {
+    .carte-commandes {
+        max-width: 90vw;
+        padding: 8px 2vw;
+    }
+}
+@media (max-width: 768px) {
+    .carte-commandes {
+        max-width: 98vw;
+        padding: 4px 1vw;
+    }
+}
+
+.carte-equipe
+{
+    height: 500px;
+}
+
+#equipe img 
+{ 
+    width: 100%; 
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+
+.element button 
+{ 
+    width: 100%; 
+    margin-top: 15px; 
+}
+
+.menu-minimum
+{
+    font-weight: 400;
+}
+
+.page-commande section {
+    display: flex;
+    justify-content: center;
+}
+
+.page-commande .carte {
+    width: 520px;
+    max-width: 100%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.adresse-grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.adresse-grille .plein {
+    grid-column: 1 / -1;
+}
+
+.adresse-grille small {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+}
+
+@media (max-width: 700px) {
+    .adresse-grille {
+        grid-template-columns: 1fr;
+    }
+}
+
+.element button,
+.fenetre-choix
+{ 
+    width: 100%; 
+}
+
+button,
+.element button,
+.fenetre-choix
+{ 
+    background: #00CED1; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+button:hover,
+.element button:hover,
+.fenetre-choix:hover
+{ 
+    background: #00BFBF; 
+}
+
+.element button
+{ 
+    margin-top: 15px; 
+}
+
+.fenetre-menu
+{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.fenetre-menu.actif
+{
+    display: flex;
+}
+
+.fenetre-menu-contenu
+{
+    background: #ffffff;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.fenetre-menu-contenu h3
+{
+    margin-top: 0;
+    text-align: center;
+}
+
+.fenetre-menu-aide
+{
+    text-align: center;
+    margin: 5px 0 20px;
+    color: #555;
+}
+
+.fenetre-regime
+{
+    text-align: center;
+    margin: 0 0 10px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.fenetre-menu-colonnes
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.fenetre-menu-colonne
+{
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.fenetre-menu-colonne h4
+{
+    margin: 0 0 10px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.fenetre-menu-categorie
+{
+    margin-top: 12px;
+}
+
+.fenetre-menu-categorie h5
+{
+    margin: 0 0 6px;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.fenetre-allergenes
+{
+    margin: 6px 0 0;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.fenetre-choix
+{
+    margin-top: auto;
+    width: 100%;
+}
+
+.fenetre-menu-fermer {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    color: #333;
+    font-size: 18px;
+    line-height: 1;
+    padding: 2px 6px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.fenetre-menu-fermer:hover {
+    background: #ececec;
+}
+
+/* Formulaire contact élargi et centré, sans scroll */
+.formulaire-contact {
+    max-width: 600px;
+    min-width: 350px;
+    width: 100%;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0001;
+    padding: 28px 32px 22px 32px;
+    position: relative;
+}
+
+.formulaire-contact label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+
+.formulaire-contact input[type="text"],
+.formulaire-contact input[type="email"],
+.formulaire-contact textarea {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 1.1em;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+}
+
+.formulaire-contact textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.formulaire-contact button[type="submit"] {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 12px 0;
+    margin-top: 18px;
+    background: #00c6cf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.formulaire-contact button[type="submit"]:hover {
+    background: #009ea8;
+}
+
+body, html {
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main, .contenu-principal {
+    flex: 1 0 auto;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+    /* Responsive comme espace utilisateur */
+@media (max-width: 1000px) {
+    .table-commandes {
+        max-width: 90vw;
+        padding: 8px 2vw;
+    }
+}
+
+.formulaire-contact textarea 
+{ 
+    min-height: 150px; 
+    flex: 1;
+    resize: vertical; 
+}
+
+.formulaire-contact button 
+{ 
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.carte-authentification
+{
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    border-left: 4px solid #00CED1;
+}
+
+.carte-authentification h3
+{
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.carte-authentification label
+{
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.carte-authentification input
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.carte-authentification button
+{
+    width: 100%;
+    padding: 12px;
+}
+
+.note-authentification
+{
+    max-width: 900px;
+    margin: 0 auto 30px;
+    background: rgba(0, 206, 209, 0.08);
+    border: 1px solid rgba(0, 206, 209, 0.2);
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #2c3e50;
+}
+
+.note-authentification.note-erreur
+{
+    background: rgba(231, 76, 60, 0.08);
+    border-color: rgba(231, 76, 60, 0.3);
+    color: #c0392b;
+}
+
+.note-authentification.note-succes
+{
+    background: rgba(39, 174, 96, 0.08);
+    border-color: rgba(39, 174, 96, 0.3);
+    color: #1e8449;
+}
+
+.bloc-reinitialisation
+{
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.texte-secondaire
+{
+    margin: 0 0 10px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+cite 
+{ 
+    color: #e6cb20c1; 
+    font-style: normal; 
+}
+
+footer 
+{ 
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contenu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 18px;
+}
+.horaires {
+    text-align: center;
+    margin-bottom: 0;
+}
+.liens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    margin-top: 10px;
+}
+@media (max-width: 700px) {
+    .liens {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.horaires h3 
+{ 
+    margin-bottom: 10px; 
+}
+
+.liens a 
+{ 
+    margin: 0 10px; 
+    color: #333; 
+}
+
+.liens a:hover 
+{ 
+    color: #00CED1; 
+}
+
+.frise 
+{ 
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 0; 
+}
+
+.frise::before 
+{ 
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    right: 0; 
+    height: 2px; 
+    background: #00CED1; 
+    z-index: 1; 
+}
+
+.frise-element 
+{ 
+    position: relative; 
+    z-index: 2; 
+    background: white; 
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    width: 30%; 
+    text-align: center; 
+    border-top: 4px solid #00CED1; 
+}
+
+.frise-contenu 
+{ 
+    padding: 0; 
+}
+
+#panier 
+{ 
+    position: fixed; 
+    bottom: 20px; right: 10px;
+    background: white; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1); 
+    width: 400px; 
+    z-index: 1000;
+    text-align: left;
+    align-items: flex-start;
+}
+
+#panier ul 
+{ 
+    list-style: none; 
+    padding: 0; 
+    text-align: left;
+    align-items: flex-start;
+}
+
+#panier li 
+{ 
+    margin-bottom: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.panier-supprimer
+{
+    color: white;
+    padding: 6px 10px;
+    font-size: 0.85em;
+    background: #e74c3c;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.table-ligne {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.2fr 1.2fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-size: 1em;
+    word-break: break-word;
+}
+
+.table-entete {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.2fr 1.2fr 1fr 2fr;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 600;
+    background-color: #f0f0f0;
+    padding: 12px 0;
+    border-radius: 8px 8px 0 0;
+}
+
+
+.compte-grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 100px;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .compte-grille {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+}
+
+.compte-colonne {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+    .compte-grille {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+}
+
+.compte-colonne {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.compte-bloc {
+    width: auto;
+}
+
+.compte-bloc-large {
+    width: 100%;
+}
+
+.compte-infos {
+    /* width et max-width gérées par la grille */
+    margin-bottom: 40px;
+}
+
+.compte-avis {
+    /* width et max-width gérées par la grille */
+    margin-top: 40px;
+    border-left: 4px solid #00CED1;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.compte-colonne-droite {
+    height: 100%;
+}
+
+.compte-etroit {
+    width: var(--compte-largeur);
+    max-width: var(--compte-largeur);
+}
+
+.compte-commandes {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    box-sizing: border-box;
+    padding: 32px 32px 32px 32px;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 4px solid #00CED1;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .compte-grille, .compte-grille-haut {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        justify-content: center;
+        justify-items: center;
+    }
+    .compte-infos, .compte-avis, .compte-etroit, .compte-bloc, .carte, .carte-authentification, .formulaire-contact {
+        width: 90vw;
+        max-width: 400px;
+        min-width: 220px;
+        margin: 0 auto;
+    }
+}
+
+.actions-menu {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.actions-menu a.bouton-voir-menu {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.zone-deconnexion {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
+.panier-supprimer:hover
+{
+    background: #c0392b;
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding: 30px 20px;
+    }
+
+    header {
+        padding: 80px 20px 40px 20px;
+    }
+
+    .frise {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .frise::before {
+        display: none;
+    }
+
+    .frise-element {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #panier {
+        position: static;
+        width: 460px;
+        max-width: 90vw;
+        margin: 30px auto 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 10px;
+        gap: 8px;
+    }
+
+    nav li {
+        margin: 0 5px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.95em;
+    }
+
+    header {
+        padding: 60px 15px 30px 15px;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+
+    .zone-authentification {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .carte {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    #panier {
+        position: static;
+        width: 460px;
+        max-width: 90vw;
+        margin: 30px auto 0;
+        margin-bottom: 30px;
+    }
+
+
+    .formulaire-contact {
+        width: 70%;
+        padding: 20px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .contenu-footer {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .compte-grille,
+    .compte-grille-haut {
+        justify-items: center;
+    }
+
+    .compte-infos, .compte-avis, .compte-etroit, .compte-bloc {
+        width: 95vw;
+        max-width: 350px;
+        min-width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    nav li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    header {
+        padding: 40px 10px 20px 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h2::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    section p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .carte {
+        padding: 10px;
+    }
+
+    .element h3 {
+        font-size: 1.1em;
+    }
+
+    .element p {
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    #panier {
+        padding: 15px;
+        margin: 20px auto 0;
+    }
+
+    #panier h3 {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 0.9em;
+    }
+
+    .horaires h3 {
+        font-size: 1.1em;
+    }
+
+    .horaires p {
+        font-size: 0.85em;
+    }
+
+    .liens {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .liens a {
+        margin: 0;
+        padding: 8px;
+        background: #f0f0f0;
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
