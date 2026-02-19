@@ -1,16 +1,39 @@
+
 <?php
-$dbHote = 'localhost';
-$dbNom = 'vite_gourmand';
-$dbUtilisateur = 'root';
-$dbMotDePasse = 'root';
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 ];
-$pdoHote = new PDO("mysql:host={$dbHote};charset=utf8mb4", $dbUtilisateur, $dbMotDePasse, $options);
-$pdoHote->exec("CREATE DATABASE IF NOT EXISTS `{$dbNom}` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-$dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
-$pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
+
+if (getenv('JAWSDB_URL')) {
+    // Connexion Heroku (JawsDB)
+    $url = parse_url(getenv('JAWSDB_URL'));
+    $dbHote = $url['host'];
+    $dbNom = ltrim($url['path'], '/');
+    $dbUtilisateur = $url['user'];
+    $dbMotDePasse = $url['pass'];
+    $dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
+    $pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
+} elseif (getenv('CLEARDB_DATABASE_URL')) {
+    // Connexion Heroku (ClearDB)
+    $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
+    $dbHote = $url['host'];
+    $dbNom = ltrim($url['path'], '/');
+    $dbUtilisateur = $url['user'];
+    $dbMotDePasse = $url['pass'];
+    $dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
+    $pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
+} else {
+    // Connexion locale
+    $dbHote = 'localhost';
+    $dbNom = 'vite_gourmand';
+    $dbUtilisateur = 'root';
+    $dbMotDePasse = 'root';
+    $pdoHote = new PDO("mysql:host={$dbHote};charset=utf8mb4", $dbUtilisateur, $dbMotDePasse, $options);
+    $pdoHote->exec("CREATE DATABASE IF NOT EXISTS `{$dbNom}` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    $dsn = "mysql:host={$dbHote};dbname={$dbNom};charset=utf8mb4";
+    $pdo = new PDO($dsn, $dbUtilisateur, $dbMotDePasse, $options);
+}
 $pdo->exec("CREATE TABLE IF NOT EXISTS role (role_id INT AUTO_INCREMENT PRIMARY KEY, libelle VARCHAR(50) NOT NULL)");
 $pdo->exec("CREATE TABLE IF NOT EXISTS utilisateur (utilisateur_id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255) NOT NULL UNIQUE, password VARCHAR(255) NOT NULL, nom VARCHAR(50) NOT NULL, prenom VARCHAR(50) NOT NULL, telephone VARCHAR(30) NOT NULL, ville VARCHAR(50) NOT NULL, pays VARCHAR(50) NOT NULL, adresse_postale VARCHAR(255) NOT NULL, role_id INT NOT NULL, FOREIGN KEY (role_id) REFERENCES role(role_id))");
 $colNom = $pdo->query("SHOW COLUMNS FROM utilisateur LIKE 'nom'");
