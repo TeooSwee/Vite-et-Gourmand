@@ -67,7 +67,7 @@ $avis = $pdo->query("SELECT a.note, a.description, u.prenom FROM avis a JOIN uti
                 <p>Co-fondatrice et chef cuisinière, Julie apporte sa créativité et son expertise culinaire pour élaborer des menus inoubliables.</p>
             </div>
             <div class="element carte carte-equipe">
-                <img src="Images/José.jpg" alt="José">
+                <img src="Images/Jose.jpg" alt="José">
                 <h3>José</h3>
                 <p>Co-fondateur et responsable des opérations, José veille à ce que chaque livraison soit parfaite et que nos clients soient satisfaits.</p>
             </div>
