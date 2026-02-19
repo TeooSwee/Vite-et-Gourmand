@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($utilisateur) {
                 $token = creerTokenReinitialisation($pdo, $emailRecup);
-                $lien = 'http://localhost:8888/Evaluations/reinitialiser_mdp.php?email=' . urlencode($emailRecup) . '&token=' . urlencode($token);
+                $lien = 'https://vite-et-gourmand.rf.gd/reinitialiser_mdp.php?email=' . urlencode($emailRecup) . '&token=' . urlencode($token);
                 $sujet = 'Réinitialisation de votre mot de passe';
                 $messageMail = "Bonjour {$utilisateur['prenom']},\n\nPour réinitialiser votre mot de passe, cliquez sur ce lien :\n{$lien}";
                 envoyerMailSmtp($emailRecup, $sujet, $messageMail);

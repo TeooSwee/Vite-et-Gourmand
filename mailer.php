@@ -37,7 +37,7 @@ function envoyerMailSmtp($destinataire, $sujet, $message)
         return false;
     }
     smtpLireReponse($socket);
-    if (!smtpCommande($socket, 'EHLO localhost', 250)) {
+    if (!smtpCommande($socket, 'EHLO vite-et-gourmand.rf.gd', 250)) {
         fclose($socket);
         return false;
     }
@@ -47,7 +47,7 @@ function envoyerMailSmtp($destinataire, $sujet, $message)
             return false;
         }
         stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
-        if (!smtpCommande($socket, 'EHLO localhost', 250)) {
+        if (!smtpCommande($socket, 'EHLO vite-et-gourmand.rf.gd', 250)) {
             fclose($socket);
             return false;
         }
