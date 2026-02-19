@@ -4,6 +4,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Redirige vers la page d'accueil principale
-header('Location: Accueil.php');
+// Test : affichage simple
+echo 'Index.php fonctionne sur Heroku';
 exit;
