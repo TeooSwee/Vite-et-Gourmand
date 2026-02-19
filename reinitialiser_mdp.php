@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare('UPDATE utilisateur SET reset_token = ?, reset_token_expire = ? WHERE utilisateur_id = ?');
             $stmt->execute([$token, $expire, $user['utilisateur_id']]);
             require 'mailer.php';
-            $lien = "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . "/reinitialiser_mdp.php?token=$token";
+            $lien = "https://vite-et-gourmand.rf.gd/reinitialiser_mdp.php?token=$token";
             envoyerMailSmtp($email, 'Réinitialisation de mot de passe', "Cliquez sur ce lien pour réinitialiser votre mot de passe : $lien");
             $message = "Un email de réinitialisation a été envoyé.";
         } else {
